@@ -12,11 +12,10 @@ angular.module('yoemanIdsApp')
     var vm = this;
     var url = "https://ops.epo.org/3.1/auth/accesstoken";
     var encoded_credentials = window.btoa('MoQnFnrm65c4eFiW4AhR0JFxkF0jUpPq:GtQaCOKwVEdNJlvA');
-    console.log("main id : "+this.id);
     this.logout = function(){
       $location.path("/");
     };
-  
+
     $http({
       'method': 'GET',
       'url': "http://ops.epo.org/3.1/rest-services/published-data/publication/epodoc/US9623902/full-cycle.js",
