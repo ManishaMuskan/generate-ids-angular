@@ -15,7 +15,7 @@ angular
     '720kb.datepicker',
     'oauth'
   ])
-  .config(function ($routeProvider) {
+  .config(function($routeProvider, $httpProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/getStarted.html',
@@ -46,4 +46,42 @@ angular
       .otherwise({
         redirectTo: '/404'
       });
-  });
+
+});
+//   .factory('myService', ['$location',
+//   function($location) {
+//     return {
+//       l_out: function() {
+//           $location.path("/");
+//       }
+//     };
+//   }])
+// .factory("UserService", function($http) {
+//   var users = ["Peter", "Daniel", "Nina"];
+//   var userdata = "hello";
+//     $http({
+//       url: 'http://ops.epo.org/3.1/rest-services/published-data/publication/epodoc/' + 'US9623902' + '/biblio.js',
+//       type: 'GET',
+//       dataType: "jsonP",
+//       success: function(data) {
+//
+//           userdata = data['ops:world-patent-data']['exchange-documents']['exchange-document']['bibliographic-data']['parties']['inventors']['inventor'];
+//
+//         // userdata = data['ops:world-patent-data']['exchange-documents']['exchange-document']['bibliographic-data']['parties']['inventors']['inventor'];
+//       },
+//       error: function(XMLHttpRequest, textStatus, errorThrown) {
+//         return textStatus;
+//       }
+//     });
+//   return {
+//     all: function() {
+//       return users;
+//     },
+//     first: function() {
+//       return users[0];
+//     },
+//     alldata: function() {
+//       return userdata;
+//     }
+//   };
+// });

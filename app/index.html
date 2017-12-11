@@ -30,7 +30,7 @@
   <div class="container-fluid" style="padding:0;">
     <div ng-view=""></div>
   </div>
-  <div class="footer">
+  <div class="footer" style="position:fixed; bottom:0;">
     <div class="container-fluid">
       <p><span class="glyphicon glyphicon-heart"></span> Developed by Manisha</p>
     </div>
@@ -49,7 +49,6 @@
     ga('create', 'UA-XXXXX-X');
     ga('send', 'pageview');
   </script>
-
   <!-- build:js(.) scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -70,7 +69,7 @@
   <script src="scripts/controllers/about.js"></script>
   <script src="scripts/controllers/login.js"></script>
   <script src="scripts/controllers/registration.js"></script>
-  <script src="scripts/controllers/header.js"></script>
+  <script src="scripts/services/mydatafetcher.js"></script>
   <!-- endbuild -->
 </body>
 
